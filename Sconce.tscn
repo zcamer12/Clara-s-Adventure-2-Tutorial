@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Models/Sconce/Sconce.glb" type="PackedScene" id=1]
+[ext_resource path="res://LightingTo.gd" type="Script" id=2]
+
+[node name="Sconce" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+is_lit = true
+
+[node name="OmniLight" type="OmniLight" parent="." index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0439531, 0.953631, 0.0779785 )
+light_color = Color( 0.94902, 0.631373, 0.203922, 1 )
+light_energy = 3.0
+light_indirect_energy = 2.0
