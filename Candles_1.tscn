@@ -10,6 +10,6 @@ is_lit = true
 [node name="OmniLight" type="OmniLight" parent="." index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105619, 0.856178, 0 )
 light_color = Color( 0.94902, 0.631373, 0.203922, 1 )
-light_energy = 2.0
+light_indirect_energy = 1.5
 shadow_enabled = true
 omni_range = 3.0
