@@ -15,6 +15,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Clara 2: Electric Boogaloo"
+run/main_scene="res://Level_01.tscn"
 config/icon="res://icon.png"
 
 [rendering]
