@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Models/Floor/Floor_Standard.glb" type="PackedScene" id=1]
 [ext_resource path="res://Models/Architecture/Curve.glb" type="PackedScene" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://Floor-Mesh-Library.tres" type="MeshLibrary" id=25]
 [ext_resource path="res://Parchment.tscn" type="PackedScene" id=26]
 [ext_resource path="res://UI.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=28]
 
 [sub_resource type="GIProbeData" id=2]
 bounds = AABB( -12, -5, -15, 24, 10, 30 )
@@ -52,6 +53,9 @@ filter_ledge_spans = true
 size = Vector2( 20, 30 )
 subdivide_width = 20
 subdivide_depth = 20
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 8, 1, 10 )
 
 [node name="Level_01" type="Spatial"]
 
@@ -275,7 +279,7 @@ interior = true
 data = SubResource( 2 )
 
 [node name="Parchment" parent="." instance=ExtResource( 26 )]
-transform = Transform( 1, 0, 0, 0, 0.283714, -0.958909, 0, 0.958909, 0.283714, -1.59421, 1.45157, 9.12173 )
+transform = Transform( 1, 0, 0, 0, 0.283714, -0.958909, 0, 0.958909, 0.283714, -2.87848, 0.388814, 5.36164 )
 
 [node name="InterpolatedCamera2" type="InterpolatedCamera" parent="."]
 transform = Transform( -0.390731, -0.51474, 0.763133, 0, 0.829038, 0.559193, -0.920505, 0.218494, -0.323931, 14, 8, -3 )
@@ -526,3 +530,12 @@ visible = false
 mesh = SubResource( 1 )
 skeleton = NodePath("../Navigation/NavigationMeshInstance/Dock")
 material/0 = ExtResource( 24 )
+
+[node name="Player" parent="." instance=ExtResource( 28 )]
+nav = NodePath("../Navigation")
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01384, -1.05, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 4 )
