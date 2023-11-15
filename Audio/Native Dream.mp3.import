@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Native Dream.mp3-563f8bce75f82970bafdea406903a66e.mp3str"
+
+[deps]
+
+source_file="res://Audio/Native Dream.mp3"
+dest_files=[ "res://.import/Native Dream.mp3-563f8bce75f82970bafdea406903a66e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
