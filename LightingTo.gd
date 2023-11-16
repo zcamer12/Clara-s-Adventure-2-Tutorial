@@ -13,3 +13,11 @@ func _process(_delta: float) -> void:
 	
 	$OmniLight.visible = is_lit
 
+
+
+func _on_Area_body_entered(body):
+	if is_lit == false:
+		$CandleLitNoise.play()
+	if body.name == "Player":
+		is_lit = true
+

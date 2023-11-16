@@ -11,5 +11,5 @@ dest_files=[ "res://.import/TorchWhoosh.ogg-d3d5c3d63a67b634c875c31676c4a627.ogg
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
