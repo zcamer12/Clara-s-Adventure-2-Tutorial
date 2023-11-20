@@ -20,5 +20,6 @@ func _on_Area_body_entered(body):
 		else:
 			$LockFiddling.play()
 		
-#func load_level():
+func load_level():
+	print("what level")
 #	EventBus.emit_signal("change_level", "Level-02.tscn")

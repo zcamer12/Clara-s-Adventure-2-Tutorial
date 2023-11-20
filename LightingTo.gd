@@ -12,12 +12,15 @@ func switch(condition):
 func _process(_delta: float) -> void:
 	
 	$OmniLight.visible = is_lit
+	if is_lit:
+		yield(get_tree().create_timer(randf()*2.0), "timeout")
+	$AnimationPlayer.play("Flicker")
 
 
 
 func _on_Area_body_entered(body):
-	if is_lit == false:
-		$CandleLitNoise.play()
 	if body.name == "Player":
+		if is_lit == false:
+			$CandleLitNoise.play()
 		is_lit = true
 
